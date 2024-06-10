@@ -1,0 +1,78 @@
+{
+    "name": "BunnyInputs",
+    "maps": [
+        {
+            "name": "GamesControls",
+            "id": "c35b39bc-b376-4b22-82b6-838b8a44edf9",
+            "actions": [
+                {
+                    "name": "BunnyMovement",
+                    "type": "Value",
+                    "id": "52a25bb2-3a51-4ca8-a806-8b82416faa1d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Keyboard",
+                    "id": "88af7ecf-7fd2-4e19-9c4b-dbd471918c41",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BunnyMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "a76b23c9-181d-4270-8d93-d11bfdac4065",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BunnyMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "7bacf249-43cc-4533-a00e-961fda562432",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BunnyMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b78f4112-0d23-42a3-8ed2-6621073ed5e4",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BunnyMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "5d5e000d-c2e1-4a18-b5ff-a44f0dbaa8f4",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BunnyMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
