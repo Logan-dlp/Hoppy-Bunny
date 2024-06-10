@@ -14,7 +14,7 @@ namespace DynamicEnvironment
         {
             transform.position += transform.forward * _speed * Time.fixedDeltaTime;
 
-            if (Vector3.Distance(transform.position, _unspawnPoint.position) < .1f)
+            if (Vector3.Distance(transform.position, _unspawnPoint.position) < .5f)
             {
                 transform.position = _spawnPoint.position;
             }
