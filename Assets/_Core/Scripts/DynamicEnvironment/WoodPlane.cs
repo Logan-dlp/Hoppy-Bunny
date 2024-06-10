@@ -1,13 +1,20 @@
-using Bunny;
+using System;
 using UnityEngine;
 
 namespace DynamicEnvironment
 {
-    public class Car : MonoBehaviour
+    public class WoodPlane : MonoBehaviour
     {
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private Transform _unspawnPoint;
         [SerializeField] private float _speed;
+
+        private Vector3 _initialPosition;
+
+        private void Awake()
+        {
+            _initialPosition = transform.position;
+        }
 
         private void Update()
         {
@@ -15,15 +22,7 @@ namespace DynamicEnvironment
 
             if (transform.position.x - _unspawnPoint.position.x < .5f)
             {
-                transform.position = _spawnPoint.position;
-            }
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out BunnyGameState bunnyGameState))
-            {
-                bunnyGameState.Death();
+                transform.position = _initialPosition;
             }
         }
     }
