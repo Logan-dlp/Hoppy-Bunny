@@ -24,8 +24,7 @@ namespace Bunny
             {
                 if (_haveParent)
                 {
-                    Debug.Log(transform.root);
-                    transform.SetParent(transform.root);
+                    transform.parent = null;
                     _haveParent = false;
                 }
                 if (raycastHit.transform != null && raycastHit.transform.tag == "Platform")
