@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bunny
   - Block
+  - Platform
   layers:
   - Default
   - TransparentFX

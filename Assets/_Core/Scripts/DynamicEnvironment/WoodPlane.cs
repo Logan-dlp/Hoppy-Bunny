@@ -1,9 +1,9 @@
-using Bunny;
+using System;
 using UnityEngine;
 
 namespace DynamicEnvironment
 {
-    public class Car : MonoBehaviour
+    public class WoodPlane : MonoBehaviour
     {
         [SerializeField] private Transform _spawnPoint;
         [SerializeField] private Transform _unspawnPoint;
@@ -16,14 +16,6 @@ namespace DynamicEnvironment
             if (transform.position.x - _unspawnPoint.position.x < .5f)
             {
                 transform.position = _spawnPoint.position;
-            }
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.TryGetComponent(out BunnyGameState bunnyGameState))
-            {
-                bunnyGameState.Death();
             }
         }
     }

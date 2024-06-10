@@ -9,6 +9,8 @@ namespace Bunny
         [SerializeField] private float _jumpForce;
         [SerializeField] private LayerMask _obstacleLayer;
 
+        private bool _haveParent = false;
+
         private void Update()
         {
             Debug.DrawLine(transform.position, transform.position + transform.forward, Color.red);
@@ -20,6 +22,17 @@ namespace Bunny
             Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _jumpForce);
             if (raycastHit.transform == null || raycastHit.transform.tag != "Block")
             {
+                if (_haveParent)
+                {
+                    Debug.Log(transform.root);
+                    transform.SetParent(transform.root);
+                    _haveParent = false;
+                }
+                if (raycastHit.transform != null && raycastHit.transform.tag == "Platform")
+                {
+                    transform.SetParent(raycastHit.transform);
+                    _haveParent = true;
+                }
                 transform.position = transform.position + transform.forward * _jumpForce;
             }
         }
