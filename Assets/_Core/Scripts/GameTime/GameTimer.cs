@@ -5,7 +5,7 @@ namespace GameTime
 {
     public class GameTimer : MonoBehaviour
     {
-        [SerializeField] private TextMeshPro _timerText;
+        [SerializeField] private TextMeshProUGUI _timerText;
         [SerializeField] private float _timer;
 
         private void Update()
