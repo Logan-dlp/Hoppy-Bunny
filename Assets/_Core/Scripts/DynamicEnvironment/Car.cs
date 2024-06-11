@@ -1,3 +1,4 @@
+using System;
 using Bunny;
 using UnityEngine;
 
@@ -9,13 +10,20 @@ namespace DynamicEnvironment
         [SerializeField] private Transform _unspawnPoint;
         [SerializeField] private float _speed;
 
+        private Vector3 _initialPosition;
+
+        private void Awake()
+        {
+            _initialPosition = transform.position;
+        }
+
         private void Update()
         {
             transform.position += transform.forward * _speed * Time.deltaTime;
 
             if (transform.position.x - _unspawnPoint.position.x < .5f)
             {
-                transform.position = _spawnPoint.position;
+                transform.position = _initialPosition;
             }
         }
 
