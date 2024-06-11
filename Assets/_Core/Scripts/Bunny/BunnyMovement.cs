@@ -13,13 +13,13 @@ namespace Bunny
 
         private void Update()
         {
-            Debug.DrawLine(transform.position, transform.position + transform.forward, Color.red);
+            Debug.DrawLine(transform.position, transform.position + transform.forward * (_jumpForce + .5f), Color.red);
         }
 
         public void Movement(Vector2 direction)
         {
             transform.LookAt(new Vector3(direction.x, 0, direction.y) + transform.position);
-            Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _jumpForce);
+            Physics.Raycast(transform.position, transform.forward * (_jumpForce + .5f), out RaycastHit raycastHit, _jumpForce);
             if (raycastHit.transform == null || raycastHit.transform.tag != "Block")
             {
                 if (_haveParent)
