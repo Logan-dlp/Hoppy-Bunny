@@ -7,7 +7,6 @@ namespace GameScene
     {
         [SerializeField] private string[] _sceneNameArray;
         [SerializeField] private bool _cursorIsVisible;
-        [SerializeField] private CursorLockMode _cursorLockMode;
 
         private void Awake()
         {
@@ -15,7 +14,7 @@ namespace GameScene
             {
                 SceneLoader.Instance.LoadScene(itemName, LoadSceneMode.Additive);
             }
-            CursorGame.Instance.SetCursor(_cursorIsVisible, _cursorLockMode);
+            CursorGame.Instance.SetCursor(_cursorIsVisible);
         }
     }
 }

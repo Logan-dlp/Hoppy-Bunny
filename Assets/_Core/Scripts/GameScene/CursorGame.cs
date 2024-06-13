@@ -21,10 +21,12 @@ namespace GameScene
             DontDestroyOnLoad(this.gameObject);
         }
 
-        public void SetCursor(bool isVisible, CursorLockMode mode)
+        public void SetCursor(bool isVisible)
         {
+            CursorLockMode lockMode;
+            if (isVisible) lockMode = CursorLockMode.None; else lockMode = CursorLockMode.Locked;
             Cursor.visible = isVisible;
-            Cursor.lockState = mode;
+            Cursor.lockState = lockMode;
         }
     }
 }
