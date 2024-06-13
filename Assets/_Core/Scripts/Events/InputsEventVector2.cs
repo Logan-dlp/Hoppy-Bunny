@@ -10,11 +10,11 @@ namespace Events
     {
         public Action<Vector2> Vector2Action;
 
-        public void InvokeEvents(InputAction.CallbackContext _ctx)
+        public void InvokeEvents(InputAction.CallbackContext ctx)
         {
-            if (_ctx.started)
+            if (ctx.started)
             {
-                Vector2Action?.Invoke(_ctx.ReadValue<Vector2>());
+                Vector2Action?.Invoke(ctx.ReadValue<Vector2>());
             }
         }
     }
