@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Core/Scenes/FeatureTest/PlayerController.unity
-    guid: 02ca281c9d917fa4c81931dea45f6f53
+    path: Assets/_Core/Scenes/Final/Menu.unity
+    guid: 96a6c71fda925374eaa6c7c3fbb58cf7
+  - enabled: 1
+    path: Assets/_Core/Scenes/Final/Games.unity
+    guid: 83ef0b35fd19f8941910c020ee92bee8
+  - enabled: 1
+    path: Assets/_Core/Scenes/Final/Settings.unity
+    guid: 5cba1e9dab4375145ba515a2b453f8a1
   - enabled: 1
     path: Assets/_Core/Scenes/FeatureTest/UI.unity
     guid: 251f3ddbccb67af4c96d0a69e7c3d9c8
+  - enabled: 1
+    path: Assets/_Core/Scenes/Final/Death.unity
+    guid: 07d779c921bac3e40a256d706cdfe085
   m_configObjects: {}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8668158636953440951}
   - component: {fileID: 6439183296998723390}
+  - component: {fileID: 4203163274368386261}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
@@ -44,3 +45,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05feeeed685203340883f95ce29f4779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4203163274368386261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152465381783409497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac32711023a155d458f0f00863a8472a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputsEventButton: {fileID: 11400000, guid: 66dae4414073ad54b8216c8e306f7d93, type: 2}
+  _callbacks:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6439183296998723390}
+        m_TargetAssemblyTypeName: GameScene.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -16,5 +16,10 @@ namespace Events
                 ButtonAction?.Invoke();
             }
         }
+        
+        public void InvokeEvent()
+        {
+            ButtonAction?.Invoke();
+        }
     }
 }

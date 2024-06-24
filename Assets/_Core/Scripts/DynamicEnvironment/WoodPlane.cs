@@ -13,6 +13,7 @@ namespace DynamicEnvironment
         private void Awake()
         {
             _initialPosition = transform.position;
+            _initialPosition.x = _spawnPoint.position.x;
         }
 
         private void Update()

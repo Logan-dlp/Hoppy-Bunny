@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: MapsSources
   m_EditorClassIdentifier: 
   GameObjectsArray:
-  - {fileID: 6435134348475879787, guid: d3aa6f8e9ae0fa24a988457b9ded9c9c, type: 3}
+  - {fileID: 4554618360264156819, guid: 2524a50f0cacb074f838e90feeb15fdd, type: 3}
+  - {fileID: 9009214629922426810, guid: ffd72c58081a19f47bdd1ecb28cad513, type: 3}
+  - {fileID: 5737850116359385690, guid: dc325e788846df14c86c4f54438bf7bb, type: 3}
