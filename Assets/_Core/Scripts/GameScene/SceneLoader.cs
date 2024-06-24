@@ -21,6 +21,11 @@ namespace GameScene
             }
             DontDestroyOnLoad(this.gameObject);
         }
+        
+        public void LoadScene(string name)
+        {
+            SceneManager.LoadScene(name);
+        }
 
         public void LoadScene(string name, LoadSceneMode mode)
         {

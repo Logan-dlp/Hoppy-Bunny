@@ -21,7 +21,6 @@ namespace Events.Listener
         private void InvokeEvent()
         {
             _callbacks?.Invoke();
-            Debug.Log("switch");
         }
     }
 }

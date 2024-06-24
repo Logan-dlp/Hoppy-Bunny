@@ -14,11 +14,12 @@ namespace DynamicEnvironment
         private void Awake()
         {
             _initialPosition = transform.position;
+            _initialPosition.x = _spawnPoint.position.x;
         }
 
         private void Update()
         {
-            transform.position += transform.forward * _speed * Time.deltaTime;
+            transform.position += transform.right * _speed * Time.deltaTime;
 
             if (transform.position.x - _unspawnPoint.position.x < .5f)
             {
